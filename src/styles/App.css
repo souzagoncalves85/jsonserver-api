@@ -1,0 +1,167 @@
+/* Define variáveis CSS globais para facilitar a reutilização de cores e estilos */
+:root {
+  --background-body: #E5E5E5; /* Cor de fundo para o corpo da página */
+  --background-content: #1D1D1D; /* Cor de fundo para o conteúdo principal */
+  --text-color: #292929; /* Cor do texto padrão */
+  --primary-color: #4DFF7C; /* Cor primária para botões e destaques */
+  --second-color: #89DDFF; /* Cor secundária para botões e elementos */
+}
+
+/* Estilos gerais para o corpo da página */
+body {
+  margin: 0; /* Remove margens padrão */
+  font-size: 1rem; /* Define o tamanho da fonte base */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; /* Define uma lista de fontes, com fallback para sistemas diferentes */
+  -webkit-font-smoothing: antialiased; /* Suaviza fontes em sistemas baseados em Webkit */
+  -moz-osx-font-smoothing: grayscale; /* Suaviza fontes em sistemas OS X */
+  background-color: var(--background-body); /* Aplica a cor de fundo definida na variável */
+  color: var(--text-color); /* Aplica a cor do texto definida na variável */
+}
+
+/* Estilos para o cabeçalho fixo */
+header {
+  position: fixed; /* Fixa o cabeçalho na parte superior da página */
+  width: 100%; /* Ocupa toda a largura da tela */
+  height: 3.5rem; /* Define a altura do cabeçalho */
+  top: 0px; /* Posiciona no topo */
+  left: 0px; /* Posiciona à esquerda */
+  background-color: var(--background-content); /* Aplica a cor de fundo do conteúdo */
+  color: var(--background-body); /* Aplica a cor do texto do cabeçalho */
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra leve abaixo do cabeçalho */
+  z-index: 10; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+/* Estilos para o conteúdo do cabeçalho */
+.header__content {
+  max-width: 1280px; /* Define a largura máxima para centralizar o conteúdo */
+  padding: 0 1rem; /* Adiciona um espaçamento interno */
+  margin: auto; /* Centraliza o conteúdo horizontalmente */
+  display: flex; /* Utiliza o flexbox para organizar os itens */
+  justify-content: space-between; /* Distribui o espaço igualmente entre os itens */
+  align-items: center; /* Alinha verticalmente ao centro */
+  position: relative; /* Define um contexto de posicionamento */
+  height: 3.5rem; /* Garante que o conteúdo tenha a mesma altura do cabeçalho */
+}
+
+/* Estilos para o logo dentro do cabeçalho */
+.logo {
+  font-size: 20px; /* Define o tamanho da fonte do logo */
+  display: flex; /* Utiliza o flexbox para organizar o logo e seus itens */
+  gap: 0.5rem; /* Espaçamento entre itens do logo */
+  align-items: center; /* Alinha os itens do logo verticalmente ao centro */
+  color: var(--background-body); /* Cor do texto do logo */
+}
+
+/* Estilos para o conteúdo principal da página */
+main {
+  width: 80%; /* Define a largura como 80% da tela */
+  margin: auto; /* Centraliza o conteúdo horizontalmente */
+  margin-bottom: 3rem; /* Espaço inferior */
+  margin-top: 4.5rem; /* Espaço superior para acomodar o cabeçalho fixo */
+  padding: 2rem; /* Espaçamento interno ao redor do conteúdo */
+  /* background-color: var(--background-content); */
+  /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
+  border-radius: 3px; /* Canto arredondado */
+}
+
+/* Estilos para o formulário */
+form {
+  width: fit-content; /* A largura se ajusta ao conteúdo */
+  margin: auto; /* Centraliza o formulário */
+}
+
+/* Estilos para inputs e selects dentro do formulário */
+input, select {
+  border: none; /* Remove bordas */
+  border-radius: 3px; /* Canto arredondado */
+  padding: 6px; /* Espaçamento interno */
+  margin:  0 6px; /* Margem entre os inputs */
+}
+
+/* Estilo para o título dentro do formulário */
+h3 {
+  text-align: center; /* Centraliza o texto */
+  margin-top: 0; /* Remove margem superior */
+}
+
+/* Estilos para botões */
+button {
+  background-color: var(--second-color); /* Cor de fundo definida na variável */
+  color: var(--text-color); /* Cor do texto do botão */
+  border: none; /* Remove bordas */
+  cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+  border-radius: 3px; /* Cantos arredondados */
+  font-weight: bold; /* Texto em negrito */
+}
+
+/* Estilos para o contêiner de botões */
+.buttons {
+  width: 100%; /* Largura total */
+  display: flex; /* Utiliza flexbox para organizar botões */
+  justify-content: space-around; /* Espaçamento igual entre botões */
+  gap: 0.5rem; /* Espaçamento entre os botões */
+}
+
+/* Estilo específico para o botão de submissão */
+.btn-submit {
+  background-color: var(--primary-color); /* Cor de fundo definida na variável */
+  padding: 6px 12px; /* Espaçamento interno */
+  cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+  font-weight: bolder; /* Texto mais em negrito */
+}
+
+/* Efeito hover para botões */
+button:hover,
+.btn-submit:hover {
+  opacity: 0.8; /* Reduz a opacidade ao passar o cursor */
+}
+
+/* Estilos para o contêiner que mostra todos os usuários */
+.all-users {
+  margin-top: 3rem; /* Espaço superior */
+}
+
+/* Estilos para títulos e linhas da tabela */
+.titles,
+.row {
+  width: 100%; /* Largura total */
+  display: flex; /* Utiliza flexbox para organizar colunas */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Estilos para os títulos da tabela */
+.titles {
+  font-weight: bold; /* Negrito para os títulos */
+  background-color: var(--text-color); /* Cor de fundo dos títulos */
+  color: var(--background-body); /* Cor do texto dos títulos */
+}
+
+/* Estilos para cada célula das colunas */
+.titles div,
+.row input,
+.row select,
+.row div {
+  width: 20%; /* Cada célula ocupa 20% da largura total */
+  padding: 0.5rem; /* Espaçamento interno */
+}
+
+/* Esconde o formulário de atualização inicialmente */
+.hide-form {
+  display: none; /* Não exibe o elemento */
+}
+
+/* Estilos para telas com largura máxima de 920px */
+@media screen and (max-width: 920px) {
+  main {
+    width: 90%; /* Aumenta a largura do conteúdo para 90% */
+  }
+}
+
+/* Estilos para telas com largura máxima de 520px */
+@media screen and (max-width: 520px) {
+  main {
+    width: 100%; /* Aumenta a largura do conteúdo para 100% */
+  }
+}
